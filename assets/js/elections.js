@@ -29,6 +29,8 @@ function loadCirconscription(div){
     scrollTop: jQuery("#info").offset().top
   }, 'fast');
 
+
+
   jQuery('.circ').removeClass('selected');
   jQuery(div).addClass('selected');
   var circ = jQuery(div).attr('class').split(/\s+/)[1].replace('c','');

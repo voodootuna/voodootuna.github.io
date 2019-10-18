@@ -10,241 +10,17 @@
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-
-
-  body {
-   font-family:'Helvetica',sans-serif;
-   color:black;
-   font-weight: 300;
-  }
-
-  a, td, #app select, label, #app info-ctn {
-    font-weight: 300;
-  }
-
-  .btn {
-    font-weight: 400 !important;
-  }
-
-  #app a{
-    color:#5099b5;
-  
-  }
-
-  .wrapper{
-    background-color:#f7f7f7;
-  }
-
-	.circ:hover{
-		fill: #4c5f6b;
-    cursor:pointer;
-		
-	}
-
-  
-
-  .circ.selected {
-    fill:#4c5f6b;
-  }
-
-  .blue1 , .blue2, .blue3, .blue4, .blue5{
-    fill:#b8ccd5;
-  }
-
-	/*
-	.blue1{
-		fill: #015B98;
-		}
-	.blue2{
-		fill: #014776;
-	}
-	.blue3{
-		fill: rgb(18, 97, 150);
-	}
-	.blue4{
-		fill: #1198f3;
-	}
-	.blue5{
-		fill: #2F89C5;
-	}
-*/
-
-
-  .card-header{
-    background-color:#0e98f32e;
-  }
-
-
-
-
-.btn.btn-blue {
-  background-color: #b8cdd5;
-  border-color: #b8cdd5;
-  text-align:left;
-  font-size:16px;
-  font-weight:500;
-  color:#4c5f6b;
-  text-transform: uppercase;
-}
-.btn.btn-blue:hover{
-  cursor:pointer;
-}
-
-.c-map {
-	width:100%;
-	max-height:700px;
-}
-
-
-.map-ctn{
-  text-align:center;
-}
-
-.wrapper{
-  padding:20px;
-}
-
-#app .card {
-  background-color:#f0f0f0;
-  border:none;
-}
-
-#app .card-header{
-  border:none;
-  background-color:#f0f0f0 !important;
-}
-
-#app .card-body{
-  padding: 0 0.8rem;
-}
-
-#app .card hr {
-  margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    border-top: 1px solid #d8d8d9;
-}
-
-
-
-.const-ctn{
-  display:table;
-  min-height:70px;
-}
-
-.const-no-block{
-  background-color:#4c5f6b;
-  color:#fff;
-  width: 65px;
-  height:65px;
-  font-size:40px;
-  font-weight:500;
-  text-align:center;
-  border-radius:5px;
-}
-
-.const-name{
-  font-size:30px;
-  color:#4c5f6b;
-  line-height:35px;
-  padding-left:18px;
-}
-
-.const-no, .const-name {
-  display:table-cell;
-  vertical-align:middle
-}
-
-.info-ctn{
-  display:table;
-  font-size:13px;
-
-}
-
-#app table{
-  font-size:13px;
-}
-
-#app .table-sm td, .table-sm th {
-    padding: .15rem;
-}
-
-
-#app tr td:last-child{
-  text-align:right
-}
-
-.ret-name, .ret-pic, .vote-info {
-display:table-cell;
-}
-
-.ret-name{
-  max-width:140px;
-  min-width: 140px;
-
-}
-
-.ret-officer{
-  font-weight:bold;
-}
-
-.vote-info, .ret-name {
-  vertical-align: middle;
-  padding:10px 0;
-
-}
-
-.vote-info {
-  padding-left:10px;
-}
-
-.ret-pic {
-  background-color:#e4e4e4 ;
-  background-position: center; 
-  background-size: contain;
-  background-repeat: no-repeat;
-  width:100px;
-  height:auto;
-}
-
-/* results */
-
-.prev-results-header {
-  font-size:30px;
-  font-weight:bold;
-}
-
-.year-ctn {
-  width:100%;
-}
-.btn.year-select {
-  text-align:center;
-}
-.year-select.selected{
-  background-color:#4c5f6b;
-  color:#fff;
-}
-
-button.year-select:focus, button.year-select:hover {
-  background-color:#4c5f6b;
-  color:#fff;
-  box-shadow:none;
-}
-
-
-</style>
-
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
 <body>
 <div class="wrapper">
 <div id="app" class="container-fluid" >
     <div class="row">
         <div class="col-lg-12">
-          <h2>ELECTIONS 2019</h2>
+          
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12">
             <label for="circ-select">Circonscription</label>
             <select class="form-control" id="circ-select">
-            
             </select>
 
             <svg class="c-map" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
@@ -321,11 +97,6 @@ button.year-select:focus, button.year-select:hover {
                     </g>
                     <path d="m22.016 64.633h41.539" fill="none" stroke="#fff" stroke-width=".59655" />
             </svg>
-            <div class="description">
-              
-
-
-            </div>
         </div>
         <div id="info" class="col-lg-4 col-md-6 col-sm-12">
             <div class="card" style="width: 100%">
@@ -340,14 +111,12 @@ button.year-select:focus, button.year-select:hover {
                 <hr/>  
                   <!---- START info-ctn -->
                  <div class="info-ctn">
-                   <div class="ret-name" ">
-                     Returning Officer : 
-                     <span class="ret-officer"></span>
-                   </div>
-                   <div class="ret-pic">
-                    
-                   </div>
+                
                    <div class="vote-info">
+                    <div>
+                       Returning Officer : 
+                     <span class="ret-officer"></span>
+                    </div>
                      <div>
                        Centres de vote : <strong><span class="centres-de-vote"><span></strong>
                      </div>
@@ -358,6 +127,9 @@ button.year-select:focus, button.year-select:hover {
                          Centre de dépouillement : 
                          <div><strong><span class="centre-de-depouillement"><span></span></strong></div>
                     </div>
+                   </div>
+                     <div class="ret-pic">
+                    
                    </div>
 
 
@@ -414,7 +186,7 @@ button.year-select:focus, button.year-select:hover {
                  <!---- START vote-ctn-->
                  <div class="vote-center-ctn">
               
-                    <div class="btn btn-block btn-blue btn-toggle">Centres de vote et nombre d'electeurs</div>
+                    <div class="btn btn-block btn-blue btn-toggle selected">Centres de vote et nombre d'electeurs</div>
                     <div class="inner" style="">
                     
                       <table class="table table-sm table-striped">
@@ -514,6 +286,9 @@ for(var i=0;i<results.length;i++){
 
 jQuery('.btn-toggle').click(function(div){
   jQuery(this).parent().children('.inner').slideToggle()
+
+ jQuery(this).toggleClass("selected");
+
 });
 
 jQuery('.year-select').click(function(div){
