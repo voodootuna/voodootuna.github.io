@@ -25,9 +25,19 @@ function calculateTotalElectors(circ){
 
 function loadCirconscription(div){
 
-  jQuery('html,body').animate({
+  if(!scrollfirst){
+      jQuery('html,body').animate({
     scrollTop: jQuery("#info").offset().top
-  }, 'fast');
+    }, 'fast');
+
+
+  }else{
+      jQuery('html,body').animate({
+    scrollTop: jQuery("body").offset().top
+    }, 'fast');
+
+  }
+  scrollfirst=false;
 
 
 
@@ -48,7 +58,7 @@ function loadCirconscription(div){
   jQuery('.const-name').text(results[circ-1].name);
   jQuery('.ret-officer').text(results[circ-1].returning_officer);
   jQuery('.centre-de-depouillement').text(results[circ-1].centre_depouillement);
-    jQuery('.nomination-center').text(results[circ-1].nomination_center);
+  jQuery('.nomination-center').text(results[circ-1].nomination_center);
 
 
 
