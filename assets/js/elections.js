@@ -48,6 +48,9 @@ function loadCirconscription(div){
   jQuery('.const-name').text(results[circ-1].name);
   jQuery('.ret-officer').text(results[circ-1].returning_officer);
   jQuery('.centre-de-depouillement').text(results[circ-1].centre_depouillement);
+    jQuery('.nomination-center').text(results[circ-1].nomination_center);
+
+
 
   var  centre_votes = registry_data[circ].length;
   jQuery('.centres-de-vote').text(centre_votes);

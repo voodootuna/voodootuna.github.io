@@ -19,9 +19,21 @@
   
   }
 
+  .navbar-brand img {
+    max-width:400px;
+    padding-left:20px;
+  }
+
   .wrapper{
     background-color:#f7f7f7;
   }
+
+.circ-name{
+   font-size: 30px;
+    color: #4c5f6b;
+    line-height: 35px;
+}
+ 
 
   .circ:hover{
     fill: #4c5f6b;
@@ -161,7 +173,7 @@
 }
 
 
-#app tr td:last-child{
+#app tr td:last-child, #app tr th:last-child{
   text-align:right
 }
 
@@ -187,6 +199,7 @@ display:table-cell;
 
 .vote-info {
   padding-left:10px;
+
 }
 
 .ret-pic {
@@ -220,4 +233,16 @@ button.year-select:focus, button.year-select:hover {
   background-color:#4c5f6b;
   color:#fff;
   box-shadow:none;
+}
+
+/* cand table */
+
+#app .cand-ctn table td, #app .cand-ctn table th  {
+  vertical-align:middle;
+  padding: .2rem;
+}
+
+#app .cand-ctn table svg {
+  width: 25px;
+  height: 25px;
 }

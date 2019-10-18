@@ -11,15 +11,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
-<body>
+<body id="app">
+  <!-- Just an image -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="./assets/img/logo.png"  alt="lemauricien.com">
+       <img src="./assets/img/logo-elections.png"  alt="lemauricien.com">
+  </a>
+</nav>
 <div class="wrapper">
-<div id="app" class="container-fluid" >
+
+<div  class="container-fluid" >
     <div class="row">
         <div class="col-lg-12">
           
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12">
-            <label for="circ-select">Circonscription</label>
+            <label class="circ-name" for="circ-select">Circonscription</label>
             <select class="form-control" id="circ-select">
             </select>
 
@@ -125,8 +133,13 @@
                     </div>
                     <div>
                          Centre de dépouillement : 
-                         <div><strong><span class="centre-de-depouillement"><span></span></strong></div>
+                         <strong><span class="centre-de-depouillement"><span></span></strong>
                     </div>
+                    <div>
+                         Nomination Center : 
+                         <strong><span class="nomination-center"><span></span></strong>
+                    </div>
+          
                    </div>
                      <div class="ret-pic">
                     
