@@ -168,9 +168,10 @@
   font-size:13px;
 }
 
-#app .table-sm td, .table-sm th {
+#app .table-sm td, #app .table-sm th {
     padding: .15rem;
 }
+
 
 
 #app tr td:last-child, #app tr th:last-child{
