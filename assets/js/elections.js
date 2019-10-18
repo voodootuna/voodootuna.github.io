@@ -11,6 +11,22 @@ function generateRegistryTableBody(data){
     }
   return html;
 
+}
+
+
+function generateCandidatesTableBody(data){
+  var html = '';
+  var svg_base = './assets/img/logoparty/';
+
+
+  for(var i=0; i<data.length; i++){
+    t = data[i];
+    var logo = logo_data[t.icon_name]  || ''
+    
+    html += '<tr><td>'+t.name+'</td><td >'+t.party+'</td><td>'+logo+'</td></tr>';
+
+    }
+  return html;
 
 }
 
@@ -76,6 +92,9 @@ function loadCirconscription(div){
   jQuery('.vote-center-ctn table tbody').html(tbody);
   loadResults(circ, "2014");
   jQuery('.year-select.2014').focus();
+
+  var tbody2 = generateCandidatesTableBody(candidates_data[circ]);
+  jQuery('.cand-ctn table tbody').html(tbody2);
 
   return circ;
 
