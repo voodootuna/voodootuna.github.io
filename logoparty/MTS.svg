@@ -1,6 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="55.921" height="55.918" viewBox="0 0 55.921 55.918">
-  <g id="Group_53" data-name="Group 53" transform="translate(-1000.726 -314.973)">
-    <path id="Path_47" data-name="Path 47" d="M18.183,36.365A27.959,27.959,0,1,0-9.777,8.4a27.961,27.961,0,0,0,27.96,27.96" transform="translate(1010.503 334.526)" fill="#797979"/>
-    <path id="Path_46" data-name="Path 46" d="M492.354-187.385l28.181.328-6.226-27.2-6.882,19.006L501.2-214.911l.983-2.949-2.294-2.294-3.277,2.949,2.294,3.277Z" transform="translate(522.456 545.154)" fill="#fff"/>
+  <g id="Group_125" data-name="Group 125" transform="translate(-1000.726 -314.973)">
+    <g id="Group_124" data-name="Group 124">
+      <g id="Group_69" data-name="Group 69">
+        <path id="Path_47" data-name="Path 47" d="M18.183,36.365A27.959,27.959,0,1,0-9.777,8.4a27.961,27.961,0,0,0,27.96,27.96" transform="translate(1010.503 334.526)" fill="#6ac6e2"/>
+        <path id="Path_46" data-name="Path 46" d="M492.354-187.385l28.181.328-6.226-27.2-6.882,19.006L501.2-214.911l.983-2.949-2.294-2.294-3.277,2.949,2.294,3.277Z" transform="translate(522.456 545.154)" fill="#fff"/>
+      </g>
+    </g>
   </g>
 </svg>

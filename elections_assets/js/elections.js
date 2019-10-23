@@ -1,5 +1,5 @@
 var selected_circ;
-
+var no_cands = 0;
 
 function generateRegistryTableBody(data){
   var html = '';
@@ -18,14 +18,19 @@ function generateCandidatesTableBody(data){
   var html = '';
 
 
-
+  no_cands = 0;
   for(var i=0; i<data.length; i++){
     t = data[i];
+    no_cands++;
     var logo = logo_data[t.icon_name]  || ''
+    var gender = gender_svg[t.gender]
     
-    html += '<tr><td>'+t.name+'</td><td >'+t.party+'</td><td>'+logo+'</td></tr>';
+    html += '<tr><td>'+t.no+'</td><td class="gender">'+gender+'</td><td>'+t.name+'</td><td >'+t.party+'</td><td>'+logo+'</td></tr>';
 
     }
+
+
+  jQuery('.no-cands').text(no_cands);
   return html;
 
 }
