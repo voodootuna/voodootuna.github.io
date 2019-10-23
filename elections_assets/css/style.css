@@ -1,4 +1,6 @@
-
+.table-responsive {
+    display: table;
+}
 
   body {
    font-family:'Helvetica',sans-serif;
@@ -282,6 +284,51 @@ button.year-select:focus, button.year-select:hover {
   }
 
 
+
+ }
+
+ @media (max-width: 320px) { 
+
+  .const-name, .prev-results-header , .circ-name{
+    font-size: 18px;
+
+    line-height: 20px;
+
+}
+
+  body#app, {
+    font-size:10px;
+  }
+
+  #app .vote-info {
+    font-size:10px;
+
+  }
+
+  #app .ret-pic{
+    width:70px;
+  }
+
+
+ 
+
+  #app .card-header {
+    padding: 0.5rem 0.5rem;
+  }
+
+  #app .btn-block, #app .btn.btn-blue, #circ-select{
+    font-size:12px;
+    line-height:14px;
+  }
+
+  #app .gender{
+    display:none;
+  }
+
+  #app table td,   #app table th{
+    padding: 0;
+    font-size:10px;
+  }
 
  }
 
