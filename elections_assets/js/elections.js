@@ -1,5 +1,6 @@
 var selected_circ;
 var no_cands = 0;
+var css_transition_time = 600;
 
 function generateRegistryTableBody(data){
   var html = '';
@@ -45,17 +46,24 @@ function calculateTotalElectors(circ){
 }
 
 function loadCirconscription(div){
-
+  jQuery('.card.transition').hide();
   if(!scrollfirst){
+
+   
+  
       jQuery('html,body').animate({
     scrollTop: jQuery("#info").offset().top
-    }, 'fast');
+    }, '550');
+
+
+   
+
 
 
   }else{
       jQuery('html,body').animate({
-    scrollTop: jQuery("body").offset().top
-    }, 'fast');
+    scrollTop: jQuery("html").offset().top
+    }, '550');
 
   }
   scrollfirst=false;
@@ -101,6 +109,7 @@ function loadCirconscription(div){
   var tbody2 = generateCandidatesTableBody(candidates_data[circ]);
   jQuery('.cand-ctn table tbody').html(tbody2);
 
+  jQuery(".card.transition").fadeIn(css_transition_time);
   return circ;
 
 }

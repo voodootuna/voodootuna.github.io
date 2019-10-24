@@ -90,7 +90,6 @@
 
 
 
-
 .btn.btn-blue {
   background-color: #b8cdd5;
   border-color: #b8cdd5;
@@ -99,6 +98,8 @@
   font-weight:500;
   color:#4c5f6b;
   text-transform: uppercase;
+   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
 }
 
 .btn.btn-blue:hover, .btn.btn-blue.selected{
@@ -106,6 +107,7 @@
   background-color:#4c5f6b;
   color:#fff;
 }
+
 
 .c-map {
   width:100%;
@@ -287,6 +289,15 @@ button.year-select:focus, button.year-select:hover {
 
  }
 
+ @media (min-width: 1024px) { 
+
+  #app .card-header{
+    min-height:94px;
+  }
+
+
+ }
+
  @media (max-width: 320px) { 
 
   .const-name, .prev-results-header , .circ-name{
@@ -296,7 +307,7 @@ button.year-select:focus, button.year-select:hover {
 
 }
 
-  body#app, {
+body#app, {
     font-size:10px;
   }
 
@@ -305,16 +316,13 @@ button.year-select:focus, button.year-select:hover {
 
   }
 
-  #app .ret-pic{
+#app .ret-pic{
     width:70px;
   }
 
-
- 
-
-  #app .card-header {
+#app .card-header {
     padding: 0.5rem 0.5rem;
-  }
+}
 
   #app .btn-block, #app .btn.btn-blue, #circ-select{
     font-size:12px;
@@ -332,3 +340,66 @@ button.year-select:focus, button.year-select:hover {
 
  }
 
+ .btn.btn-blue:hover i,  .btn.btn-blue.selected i {
+   border: solid #fff;
+   border-width: 0 2px 2px 0;
+}
+
+
+ .icon {
+  float:right;
+  font-weight:500;
+ }
+
+ .icon:after{
+  content:'+';
+ }
+
+ .icon.open:after{
+  content:'-';
+ }
+
+ #back-top-btn {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#back-top-btn::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#back-top-btn:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#back-top-btn:active {
+  background-color: #555;
+}
+#back-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* footer */
+.footer {
+  padding:10px;
+  color:#fff;
+  background-color:#4c5f6b;
+}
