@@ -21,12 +21,17 @@ function generateCandidatesTableBody(data){
 
   no_cands = 0;
   for(var i=0; i<data.length; i++){
+    withdrawn = '';
     t = data[i];
     no_cands++;
     var logo = logo_data[t.icon_name]  || ''
     var gender = gender_svg[t.gender]
+    if(t.withdrawn){
+      withdrawn = 'withdrawn';
+
+    }
     
-    html += '<tr><td>'+t.no+'</td><td class="gender">'+gender+'</td><td>'+t.name+'</td><td >'+t.party+'</td><td>'+logo+'</td></tr>';
+    html += '<tr class="'+withdrawn+'"><td>'+t.no+'</td><td class="gender">'+gender+'</td><td>'+t.name+'</td><td >'+t.party+'</td><td>'+logo+'</td></tr>';
 
     }
 
@@ -95,7 +100,7 @@ function loadCirconscription(div){
   jQuery('.centres-de-vote').text(centre_votes);
 
 
-  jQuery('.ret-pic').css({backgroundImage:"url('./elections_assets/img/"+results[circ-1].ret_file_name+"')"});
+  jQuery('.ret-pic').css({backgroundImage:"url('"+ASSETS_DIR+"/img/"+results[circ-1].ret_file_name+"')"});
   //console.log("url('./assets/img/"+results[circ-1].ret_file_name+"');");
   var electors = calculateTotalElectors(registry_data[circ])
   jQuery('.electors').text(electors);

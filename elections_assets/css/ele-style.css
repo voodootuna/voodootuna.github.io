@@ -449,6 +449,41 @@ body#app, {
   vertical-align: middle;
 }
 
+#app tr.withdrawn {
+background-color: #202d34;
+
+
+}
+
+#app table tr.withdrawn td
+{
+   background-image: linear-gradient(to bottom right,  transparent calc(50% - 1px), #eb2e30, transparent calc(50% + 1px)); 
+}
+
+
+#app tr.withdrawn:hover {
+background-color: initial;
+}
+
+#app tr.withdrawn td:nth-of-type(3n):before {
+content:'WITHDRAWN';
+color:#fff;
+}
+
+
+
+#app tr.withdrawn:hover svg {
+visibility:initial; 
+
+}
+
+#app tr.withdrawn svg {
+visibility:hidden; 
+
+
+}
+
+
 
 /* footer */
 .footer {

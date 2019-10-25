@@ -23,6 +23,10 @@ def scrapworksheet(n):
 		cell_2 = sheet.cell(row, 2).value or ''
 		cell_3 = sheet.cell(row, 3).value  or ''
 		cell_4 = sheet.cell(row, 4).value  or ''
+		try:
+			cell_5 = sheet.cell(row, 5).value  or ''
+		except IndexError:
+			cell_5 = ''
 		
 
 		data.append({	"no":cell_0,
@@ -31,8 +35,9 @@ def scrapworksheet(n):
 						"party":cell_3,
 						#"prof":cell_3,
 						#"addr":cell_4,
-						#"com":cell_5,
-						"icon_name":cell_4
+						"icon_name":cell_4,
+						'withdrawn':cell_5,
+						
 					})
 	return data
 
