@@ -240,10 +240,15 @@ display:table-cell;
 #app .btn-group  {
   width:100%;
 }
+
+
 #app .btn-group .btn{
   text-align:center;
-  border-left-color:#142c40;
+  border-left-color:#345e80;
 }
+
+
+
 .year-select.selected{
   background-color:#4c5f6b;
   color:#fff;
@@ -459,3 +464,12 @@ body#app, {
   max-width:157px;
   margin-bottom:20px;
 }
+
+.lb24-liveblog-white-label, .lb24-liveblog-white-label-logo{
+  display:none !important;
+}
+
+.lb24-component-placeholder a {
+display:none !important;
+}
+

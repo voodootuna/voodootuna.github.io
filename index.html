@@ -19,7 +19,7 @@
 <meta property="og:image"              content="" />
 <link rel="shortcut icon" href="./favicon.ico">
 
-<link rel="stylesheet" type="text/css" href="./elections_assets/css/election-style.css"/>
+<link rel="stylesheet" type="text/css" href="./elections_assets/css/ele-style.css"/>
 </head>
 <body id="app">
   <!-- Just an image -->
@@ -199,7 +199,7 @@
 
                           </table>
                         </div>
-                          <hr/>
+                     
                         </div>
                      </div>
 
@@ -346,15 +346,6 @@ for(var i=0;i<results.length;i++){
 jQuery('.card-header .icon-block.news-icon').html(other_svg['news']);
 jQuery('.card-header .icon-block.results-icon').html(other_svg['results']);
 
-jQuery('.btn-toggle').click(function(div){
-  jQuery(this).parent().children('.inner').slideToggle()
-
-  jQuery(this).children('.icon').toggleClass("open");
-
- jQuery(this).toggleClass("selected");
-
-});
-
 
 jQuery('.select-tab').click(function(div){
 
@@ -412,14 +403,15 @@ btn.on('click', function(e) {
 
 function getRidLB(){
   //console.log("GET RID LB");
-  jQuery('.lb24-liveblog-white-label, .lb24-default-list-ad').hide();
+
+  jQuery('.lb24-liveblog-white-label, .lb24-default-list-ad, .lb24-liveblog-white-label-logo ').hide();
 
 };
 
 
 
+setTimeout(getRidLB,3000);
 
-getRidLB();
 setInterval(getRidLB, 5000);
 
 </script>
