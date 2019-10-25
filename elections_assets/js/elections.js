@@ -1,6 +1,6 @@
 var selected_circ;
 var no_cands = 0;
-var css_transition_time = 600;
+var css_transition_time = 400;
 
 function generateRegistryTableBody(data){
   var html = '';
@@ -119,7 +119,9 @@ function buildResultsTableBody(circ, year){
   var data = results_data[circ][year];
   
   for(var i=0; i<data.length; i++){
-    t = data[i]
+    t = data[i];
+
+   
     html += '<tr><td>'+t.no+'</td><td>'+t.name+'</td><td>'+t.party+'</td><td>'+t.votes+'</td><td>'+t.perc_votes+'</td></tr>';
     }
 

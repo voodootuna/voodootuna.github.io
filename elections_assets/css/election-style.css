@@ -29,28 +29,31 @@
   }
 
   #app a{
-    color:#5099b5;
+    color:#3a8ee4;
   
   }
 
-  .navbar-brand img {
-    max-width:400px;
-    padding-left:20px;
+  .navbar {
+    background-color:#f5f5f5;
+  }
+
+  .navbar .logo{
+    max-width:287px;
   }
 
   .wrapper{
-    background-color:#dfe4e6;
+    background-color:#202c34;
   }
 
 .circ-name{
    font-size: 30px;
-    color: #4c5f6b;
+    color: #fff;
     line-height: 35px;
 }
  
 
   .circ:hover{
-    fill: #4c5f6b;
+    fill: #3a8ee4;
     cursor:pointer;
     
   }
@@ -58,11 +61,11 @@
   
 
   .circ.selected {
-    fill:#4c5f6b;
+    fill:#3a8ee4;
   }
 
   .blue1 , .blue2, .blue3, .blue4, .blue5{
-    fill:#b8ccd5;
+    fill:#1f4464;
   }
 
   /*
@@ -84,19 +87,16 @@
 */
 
 
-  .card-header{
-    background-color:#0e98f32e;
-  }
-
+ 
 
 
 .btn.btn-blue {
-  background-color: #b8cdd5;
-  border-color: #b8cdd5;
+  background-color: #204564;
+  border-color: #204564;
   text-align:left;
   font-size:16px;
   font-weight:500;
-  color:#4c5f6b;
+  color:#fff;
   text-transform: uppercase;
   transition: color .25s,border-color .25s;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.16);
@@ -105,7 +105,8 @@
 
 .btn.btn-blue:hover, .btn.btn-blue.selected{
   cursor:pointer;
-  background-color:#4c5f6b;
+  background-color:#3a8ee4;
+  border-color:#3a8ee4;
   color:#fff;
 }
 
@@ -129,10 +130,7 @@
   border:none;
 }
 
-#app .card-header{
-  border:none;
-  background-color:#f0f0f0 !important;
-}
+
 
 #app .card-body{
   padding: 0 0.8rem;
@@ -146,13 +144,8 @@
 
 
 
-.const-ctn{
-  display:table;
-  min-height:70px;
-}
-
 .const-no-block{
-  background-color:#4c5f6b;
+  background-color:#3b78b2;
   color:#fff;
   width: 65px;
   height:65px;
@@ -162,17 +155,7 @@
   border-radius:5px;
 }
 
-.const-name{
-  font-size:30px;
-  color:#4c5f6b;
-  line-height:35px;
-  padding-left:18px;
-}
 
-.const-no, .const-name {
-  display:table-cell;
-  vertical-align:middle
-}
 
 .info-ctn{
   display:table;
@@ -189,6 +172,21 @@
     padding: .15rem;
 }
 
+
+#results-table tr:first-child td{
+  font-weight:600 !important;
+
+}
+
+#results-table tr:nth-child(2) td{
+  font-weight:600 !important;
+ 
+}
+
+#results-table tr:nth-child(3) td{
+  font-weight:600 !important;
+ 
+}
 
 
 #app tr td:last-child, #app tr th:last-child{
@@ -273,13 +271,16 @@ button.year-select:focus, button.year-select:hover {
 
 @media (max-width: 768px) { 
 
-  .navbar-brand {
-    width:100%;
-    text-align:center;
-   
+  #app .wrapper {
+    padding:0 0;
   }
 
-  .navbar-brand img {
+  .navbar-brand, .navbar-right  {
+    width:100%;
+    text-align:center;
+  }
+
+  .navbar-brand .logo {
    display:block;
    max-width:100%;
 
@@ -299,7 +300,11 @@ button.year-select:focus, button.year-select:hover {
 
  }
 
- @media (max-width: 320px) { 
+ @media (max-width: 375px) { 
+
+  #app .card-body{
+    padding:0 0.2rem;
+  }
 
   .const-name, .prev-results-header , .circ-name{
     font-size: 18px;
@@ -349,15 +354,16 @@ body#app, {
 
  .icon {
   float:right;
-  font-weight:500;
+  overflow:hidden;
+  font-weight:900;
  }
 
  .icon:after{
-  content:'+';
+  content:'\002B';
  }
 
  .icon.open:after{
-  content:'-';
+  content:'\2212';
  }
 
  #back-top-btn {
@@ -398,9 +404,55 @@ body#app, {
 }
 
 
+#app .card-header{
+  background-color:#1c4564;
+  color:#fff;
+}
+
+.card-header-ctn{
+  display:table;
+  min-height: 70px
+}
+
+.card-header-title{
+  font-size: 30px;
+    line-height: 35px;
+    padding-left: 18px;
+}
+
+.icon-block {
+  background-color: #3b78b2;
+    min-width: 65px;
+    max-height: 65px;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+.icon-block svg {
+ width:40px;
+  height:40px;
+}
+
+.icon-block, .card-header-title {
+  display:table-cell;
+  vertical-align: middle;
+}
+
+
 /* footer */
 .footer {
   padding:10px;
+  font-size:12px;
+  line-height:14px;
+  font-weight:bold;
   color:#fff;
-  background-color:#4c5f6b;
+  background-color:#2c455a;
+}
+
+.footer .logo {
+  max-width:157px;
+  margin-bottom:20px;
 }

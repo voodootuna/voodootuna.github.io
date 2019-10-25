@@ -19,15 +19,18 @@
 <meta property="og:image"              content="" />
 <link rel="shortcut icon" href="./favicon.ico">
 
-<link rel="stylesheet" type="text/css" href="./elections_assets/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="./elections_assets/css/election-style.css"/>
 </head>
 <body id="app">
   <!-- Just an image -->
-  <nav class="navbar navbar-light bg-light">
+  <nav class="navbar ">
     <a class="navbar-brand" href="#">
-      <img src="./elections_assets/img/logo.png"  alt="lemauricien.com">
-         <img src="./elections_assets/img/logo-elections.png"  alt="lemauricien.com">
+      <img class="logo" src="./elections_assets/img/logo.png"  alt="lemauricien.com">
+       
     </a>
+    <div class='navbar-right'>
+        <img  class="logo"  src="./elections_assets/img/logo-elections.png"  alt="lemauricien.com">
+    </div>
   </nav>
   <!-- Back to top button -->
 <a id="back-top-btn"></a>
@@ -41,10 +44,10 @@
                 
               <div id="tooltip" display="none" style="position: absolute; display: none;"></div>
 
-                <svg class="c-map" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
-                    <g fill="#3597D3" stroke-width=".765">
+                <svg class="c-map" version="1.1" viewBox="0 0 210 257" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#202c34" stroke-width=".765">
                         <g stroke="#fff">
-                            <rect x="19.42" y="28.286" width="47.037" height="63.684" fill="#fafafa" />
+                         
 
 
                             <g class="circ c3 blue1" >
@@ -53,7 +56,7 @@
                                 <path d="m43.453 80.113-0.50009-1.7503-1.4645-1.6074-3.0362-5.9653-1.2145-0.42371 0.0714 1.3882 1.0002 1.1788 1.2859 2.8219 1.6431 2.429 1.2859 1.4288z" />
 
                                
-        <title>Hello, World!</title>
+       
      
                                
                             </g>
@@ -121,7 +124,6 @@
 
                             </g>
                         </g>
-                        <path d="m22.016 64.633h41.539" fill="none" stroke="#fff" stroke-width=".59655" />
                 </svg>
             </div>
 
@@ -129,9 +131,9 @@
             <div id="info" class="col-lg-4 col-md-6 col-sm-12  mt-2">
                 <div class="card transition" style="width: 100%">
                     <div class="card-header">
-                      <div class="const-ctn">
+                      <div class="card-header-ctn">
                         <div class="const-no"><div class="const-no-block"></div></div>
-                          <div class="const-name"></div>
+                          <div class="card-header-title const-name"></div>
                       </div>
                  
                     </div>
@@ -234,29 +236,16 @@
             </div>
             <!---- END Info Col ----->
 
-             <!--- START Live news Col --->
-            <div class="col-lg-4 col-md-12 col-sm-12 mt-2">
-              <div class="card" style="width: 100%">
-                  <div class="card-header">
-                    <div class="prev-results-header">Actualités</div>
-                  </div>
-               
-              
-                    <div class="card-body">
-                      <hr/>
-                            <div id="LB24_LIVE_CONTENT" data-eid="2374569739655701807"></div>
-                    </div>
-              </div>
-            </div>
-            <!--- END Live news end Col --->
-      
 
 
             <!---- START Previous results Col ---->
             <div class="col-lg-4 col-md-12 col-sm-12 mt-2">
                 <div class="card transition" style="width: 100%">
                   <div class="card-header">
-                    <div class="prev-results-header">Résultats précédents</div>
+                     <div class="card-header-ctn">
+                        <div class="icon-block results-icon"></div>
+                        <div class="card-header-title">Résultats précédents</div>
+                      </div>
                   </div>
                
               
@@ -295,6 +284,27 @@
                 </div>
             </div>
             <!---- END Previous results Col --->
+
+             <!--- START Live news Col --->
+            <div class="col-lg-4 col-md-12 col-sm-12 mt-2">
+              <div class="card" style="width: 100%">
+                  <div class="card-header">
+                    <div class="card-header-ctn">
+                        <div class="icon-block news-icon"></div>
+                        <div class="card-header-title">Actualités</div>
+                      </div>
+                    
+                  </div>
+               
+              
+                    <div class="card-body">
+                      <hr/>
+                            <div id="LB24_LIVE_CONTENT" data-eid="2374569739655701807"></div>
+                    </div>
+              </div>
+            </div>
+            <!--- END Live news end Col --->
+      
       
            
 
@@ -303,7 +313,15 @@
   </div>
   <div class="footer">
     <div class="container-fluid">
-    © 2019 Copyright Le Mauricien Ltée | Designed & Developped by Le Mauricien Web Team
+      <div class="row">
+        <div class="col-lg-6">
+          <img class="logo" src="./elections_assets/img/logo-sm-white.png"/>
+
+        <div>© 2019 Le Mauricien Ltée - 8, rue St Georges, </div>
+        <div>Port Louis, Ile Maurice - BP N° 7 Tel : (230) 207 8200 | Fax : (230) 208 7059</div>
+        <div class="col-lg-6">
+        </div>
+   
   </div>
   </div>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -325,6 +343,9 @@ console.log("START");
 for(var i=0;i<results.length;i++){
   jQuery('#circ-select').append(new Option(results[i].no + ' - ' + results[i].name, results[i].no));
 }
+
+jQuery('.card-header .icon-block.news-icon').html(other_svg['news']);
+jQuery('.card-header .icon-block.results-icon').html(other_svg['results']);
 
 jQuery('.btn-toggle').click(function(div){
   jQuery(this).parent().children('.inner').slideToggle()

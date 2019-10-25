@@ -55,4 +55,6 @@ def xls_grouping(sheet):
 
 xls_grouping(sheet)
 json_data = json.dumps(historical_data)
+with open('./registry.json','w') as f:
+	json.dump(historical_data, f)
 print("HISTORICAL DATA JSON", json_data)
