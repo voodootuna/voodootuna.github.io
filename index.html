@@ -15,7 +15,7 @@
 <meta property="og:url"                content="https://www.lemauricien.com/legislatives-2019" />
 <meta property="og:type"               content="article" />
 <meta property="og:title"              content="Élections générales 2019 - Le Mauricien" />
-<meta property="og:description"        content="Suivez l'actualité des législatives de 2019 : Les caandidats 2019, résultats, circonscriptions et Centres de Votes" />
+<meta property="og:description"        content="Suivez l'actualité des législatives de 2019 : Les candidats 2019, résultats, circonscriptions et Centres de Votes" />
 <meta property="og:image"              content="" />
 <link rel="shortcut icon" href="./favicon.ico">
 
@@ -128,7 +128,7 @@
             </div>
 
             <!--- START Info Col ----->
-            <div id="info" class="col-lg-4 col-md-6 col-sm-12  mt-2">
+            <div id="info" class="col-lg-4 col-md-6 col-sm-12  mt-4">
                 <div class="card transition" style="width: 100%">
                     <div class="card-header">
                       <div class="card-header-ctn">
@@ -171,10 +171,17 @@
                      </div>
                      <!---- End info-ctn -->
                      <hr/>
-                      <!---- START vote-ctn-->
+                       <div class="btn-group " role="group" aria-label="Basic example">
+
+                          <button type="button" class="btn btn-blue select-tab cand selected sep" data-tab="cand-ctn">Candidats</button>
+                          <button type="button" class="btn btn-blue select-tab centre sep" data-tab="vote-center-ctn">Centres</button>
+                          <button type="button" class="btn btn-blue select-tab cand" data-tab="prev-results-ctn">Resultats</button>
+
+                      </div>
+
+                    <!---- START vote-ctn-->
                      <div class="vote-center-ctn">
-                  
-                        <div class="btn btn-block btn-blue btn-toggle ">Centres de vote <span class="icon"></span></div>
+                        <div class="btn btn-block btn-blue btn-toggle " style="display:none">Centres de vote <span class="icon"></span></div>
                         <div class="inner" style="display:none">
                           <div class="table-responsive">
                           <table class="table table-sm table-striped">
@@ -197,11 +204,11 @@
                      </div>
 
                    <!---- END vote-ctn -->
-                     <hr/>
+                
+
                       <!---- START cand-ctn-->
                     <div class="cand-ctn">
-              
-                        <div class="btn btn-block btn-blue btn-toggle selected">Les Candidats 2019 (<span class="no-cands"></span>) <span class="icon open"></span></div>
+                        <div class="btn btn-block btn-blue btn-toggle selected"  style="display:none">Les Candidats 2019 (<span class="no-cands"></span>) <span class="icon open"></span></div>
                         <div class="inner" style="">
                           <div class="table-responsive">
                           <table class="table table-sm table-striped">
@@ -224,40 +231,18 @@
 
                      </div> 
                      <!---- END cand-ctn-->
-                   
                     
-      
-                 
 
-                   
-                     <br/>
+                    <!---- START prev results ---->
 
-
-                     
-                    </div>
-                </div>
-            </div>
-            <!---- END Info Col ----->
-
-
-
-            <!---- START Previous results Col ---->
-            <div class="col-lg-4 col-md-12 col-sm-12 mt-2">
-                <div class="card transition" style="width: 100%">
-                  <div class="card-header">
-                     <div class="card-header-ctn">
-                        <div class="icon-block results-icon"></div>
-                        <div class="card-header-title">Résultats précédents</div>
-                      </div>
-                  </div>
-               
-              
-                    <div class="card-body">
+                    <div class="prev-results-ctn">
                       <hr/>
+                      <div class="inner" style="display:none">
                         <div class="btn-group year-ctn" role="group" aria-label="Basic example">
-                            <button type="button" class="year btn btn-blue year-select 2014" value="2014" >2014</button>
-                            <button type="button" class="btn btn-blue year-select 2010" value="2010">2010</button>
-                            <button type="button" class="btn btn-blue year-select 2005" value="2005">2005</button>
+                            <button type="button" class="year btn btn-blue year-select 2019 sep" value="2019" >2019</button>
+                            <button type="button" class="year btn btn-blue year-select 2014 sep" value="2014" >2014</button>
+                            <button type="button" class="btn btn-blue year-select 2010 sep" value="2010">2010</button>
+                            <button type="button" class="btn btn-blue year-select 2005 sep" value="2005">2005</button>
                             <button type="button" class="btn btn-blue year-select 2000" value="2000">2000</button>
                         </div>
 
@@ -280,26 +265,36 @@
                               </table>
                             </div>
                         </div>
-                    
+                     <!---- END prev results ---->
                       
                    
                     </div>
+                    
+      
+                 
+
+                   
+                     <br/>
+
+
+                  </div> 
+                  </div>
                 </div>
             </div>
-            <!---- END Previous results Col --->
+            <!---- END Info Col ----->
 
-             <!--- START Live news Col --->
-            <div class="col-lg-8 col-md-12 col-sm-12 mt-2">
+      
+
+        
+               <!--- START Live news Col --->
+            <div class="col-lg-4 col-md-12 col-sm-12 mt-4">
               <div class="card" style="width: 100%">
                   <div class="card-header">
                     <div class="card-header-ctn">
                         <div class="icon-block news-icon"></div>
                         <div class="card-header-title">Actualités</div>
                       </div>
-                    
                   </div>
-               
-              
                     <div class="card-body">
                       <hr/>
                             <div id="LB24_LIVE_CONTENT" data-eid="2374569739655701807"></div>
@@ -307,19 +302,20 @@
               </div>
             </div>
             <!--- END Live news end Col --->
+           
       
       
            
 
         </div>
     </div>
+  <br/>
   </div>
   <div class="footer">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6">
           <img class="logo" src="./elections_assets/img/logo-sm-white.png"/>
-
         <div>© 2019 Le Mauricien Ltée - 8, rue St Georges, </div>
         <div>Port Louis, Ile Maurice - BP N° 7 Tel : (230) 207 8200 | Fax : (230) 208 7059</div>
         <div class="col-lg-6">
@@ -358,6 +354,24 @@ jQuery('.btn-toggle').click(function(div){
  jQuery(this).toggleClass("selected");
 
 });
+
+
+jQuery('.select-tab').click(function(div){
+
+  jQuery('.select-tab').removeClass("selected");
+
+  var tab = jQuery(this).attr('data-tab');
+
+  jQuery(" .inner").hide();
+
+  jQuery("."+tab+" .inner").slideToggle();
+
+
+ jQuery(this).toggleClass("selected");
+
+});
+
+
 
 jQuery('.year-select').click(function(div){
   var year = jQuery(this).val();

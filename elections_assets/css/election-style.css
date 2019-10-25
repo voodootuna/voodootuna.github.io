@@ -235,11 +235,14 @@ display:table-cell;
     line-height: 35px;
 }
 
-.year-ctn {
+
+
+#app .btn-group  {
   width:100%;
 }
-.btn.year-select {
+#app .btn-group .btn{
   text-align:center;
+  border-left-color:#142c40;
 }
 .year-select.selected{
   background-color:#4c5f6b;
